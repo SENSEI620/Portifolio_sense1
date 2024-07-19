@@ -1,14 +1,19 @@
+/* Reset de CSS */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'SF Pro Display', sans-serif;
 }
 
+/* Estilos Gerais */
 body {
     height: 100vh;
     padding: 5rem;
     background-image: linear-gradient(45deg, #000100, #0B1DBF, #0F26FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 :root {
@@ -18,7 +23,7 @@ body {
 
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('./SFPRODISPLAYREGULAR.OTF');
+    src: url('./SFPRODISPLAYREGULAR.OTF') format('opentype');
 }
 
 .flex-center {
@@ -45,8 +50,7 @@ main {
     border-radius: 10rem;
 }
 
-.logo,
-.sense1 {
+.logo, .sense1 {
     gap: 1rem;
 }
 
@@ -76,6 +80,9 @@ a {
     transition: background-color 0.3s ease, text-shadow 0.3s ease;
 }
 
+a:hover {
+    background-image: linear-gradient(45deg, #000100, #0B1DBF, #0F26FF);
+}
 
 #Instagram:hover {
     background-image: linear-gradient(to right, #9F29D8, #FC1A97, #FEAE1D);
@@ -99,11 +106,6 @@ a {
 }
 
 @media (max-width: 400px) {
-    
-    body{
-        padding: 0;
-    }
-    
     main {
         border-radius: 0;
         width: 100%;
